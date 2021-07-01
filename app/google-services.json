@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352124385360",
+    "project_id": "numberotpsignin",
+    "storage_bucket": "numberotpsignin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352124385360:android:403f0583d4ca4f5857f955",
+        "android_client_info": {
+          "package_name": "com.example.numberotpsignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352124385360-re30u1jumbj4gaabbn89tajbe4to9670.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmT5YUI6ECSinMP1KblGF5yw-2sifAmU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352124385360-re30u1jumbj4gaabbn89tajbe4to9670.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

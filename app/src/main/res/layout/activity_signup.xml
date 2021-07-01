@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:context=".Signup">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:src="@drawable/received"
+            android:layout_marginTop="60dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:text="OTP Verification"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            >
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et1"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et2"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et3"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et4"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et5"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                tools:ignore="labelfor"
+                />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:id="@+id/et6"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/backgroung_button"
+                android:text="VERIFY"
+                android:textColor="#ffffff"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/backgroung_button"
+                android:text="RESEND"
+                android:textColor="#ffffff"
+                android:textSize="24dp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

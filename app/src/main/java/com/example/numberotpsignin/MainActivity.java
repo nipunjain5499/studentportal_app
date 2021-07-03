@@ -17,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(getApplicationContext(),login.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getApplicationContext(),login.class);
+//                startActivity(intent);
 
 //                Intent intent=new Intent(getApplicationContext(),Student.class);
 //                startActivity(intent);
 //                finish();
+                Intent intent=new Intent(getApplicationContext(),FetchDetails.class);
+               startActivity(intent);
+
             }
         },2500);
 

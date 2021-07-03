@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,12 +67,100 @@ public class frag2 extends Fragment {
         bt = (Button) view.findViewById(R.id.btn1);
         resend_btn = (Button) view.findViewById(R.id.btn2);
         ed1 = (EditText) view.findViewById(R.id.et1);
-//        ed2 = (EditText) view.findViewById(R.id.et2);
-//        ed3 = (EditText) view.findViewById(R.id.et3);
-//        ed4 = (EditText) view.findViewById(R.id.et4);
-//        ed5 = (EditText) view.findViewById(R.id.et5);
-//        ed6 = (EditText) view.findViewById(R.id.et6);
+        ed2 = (EditText) view.findViewById(R.id.et2);
+        ed3 = (EditText) view.findViewById(R.id.et3);
+        ed4 = (EditText) view.findViewById(R.id.et4);
+        ed5 = (EditText) view.findViewById(R.id.et5);
+        ed6 = (EditText) view.findViewById(R.id.et6);
         EditText[] str={ed1,ed2,ed3,ed4,ed5,ed6};
+        // for automatic field moving
+        ed1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(ed1.getText().toString().length()==1)     //size as per your requirement
+                {
+                    ed2.requestFocus();
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+        ed2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(ed2.getText().toString().length()==1)     //size as per your requirement
+                {
+                    ed3.requestFocus();
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+        ed3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(ed3.getText().toString().length()==1)     //size as per your requirement
+                {
+                    ed4.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+        ed4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(ed4.getText().toString().length()==1)     //size as per your requirement
+                {
+                    ed5.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+        ed5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(ed5.getText().toString().length()==1)     //size as per your requirement
+                {
+                    ed6.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
 
 
         final PhoneAuthProvider.ForceResendingToken mResendToken = null;

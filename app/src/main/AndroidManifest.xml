@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Numberotpsignin">
-        <activity android:name=".faculty">
+        <activity
+            android:name=".HOD"
+            android:label="@string/title_activity_hod"
+            android:theme="@style/Theme.Numberotpsignin.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".hod">
+        <activity android:name=".faculty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

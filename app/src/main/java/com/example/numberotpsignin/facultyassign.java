@@ -4,33 +4,34 @@ import java.util.ArrayList;
 
 public class facultyassign {
 
-    String Name,Designation,department,contactno;
-    String facultyinterestedsub[];
+    String name,designation,department,contactno;
+    ArrayList<String> facultyinterestedsub;
     boolean assignproctore;
     ArrayList<Subjects> assignsubjects;
 
     public facultyassign() {
     }
 
-    public facultyassign(String name, String designation, String department, String contactno, boolean assignproctore, ArrayList<Subjects> assignsubjects) {
-        Name = name;
-        Designation = designation;
+    public facultyassign(String name, String designation, String department, String contactno, boolean assignproctore, ArrayList<Subjects> assignsubjects,ArrayList<String> facultyinterestedsub) {
+        this.name = name;
+        this.designation = designation;
         this.department = department;
         this.contactno = contactno;
         this.assignproctore = assignproctore;
         this.assignsubjects=assignsubjects;
+        this.facultyinterestedsub=facultyinterestedsub;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    public void setFacultyinterestedsub(String[] facultyinterestedsub) {
+    public void setFacultyinterestedsub(ArrayList<String> facultyinterestedsub) {
         this.facultyinterestedsub = facultyinterestedsub;
     }
 
     public void setDesignation(String designation) {
-        Designation = designation;
+        this.designation = designation;
     }
 
     public void setDepartment(String department) {
@@ -50,15 +51,15 @@ public class facultyassign {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public String[] getFacultyinterestedsub() {
+    public ArrayList<String> getFacultyinterestedsub() {
         return facultyinterestedsub;
     }
 
     public String getDesignation() {
-        return Designation;
+        return designation;
     }
 
     public String getDepartment() {

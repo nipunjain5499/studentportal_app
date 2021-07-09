@@ -3,9 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".faculty">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Enter Your Name "
+            android:hint="Designation "
             android:id="@+id/ed2"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -95,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Enter Your Name "
+            android:hint="Department "
             android:id="@+id/ed3"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -118,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Enter Your Name "
+            android:hint="Contact No "
             android:id="@+id/ed4"
             android:textStyle="bold"/>
 
@@ -133,19 +143,43 @@
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/interestedSubjectsList"
-        />
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/interestedSubjects">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject1"
+            android:hint="Your subject "
+            />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add more subjects"
+            android:textSize="25dp"
+            android:id="@+id/addMoreSubjects"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/facultysubmit"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center_horizontal"
+
+        android:layout_gravity="bottom"
         />
 
 </LinearLayout>

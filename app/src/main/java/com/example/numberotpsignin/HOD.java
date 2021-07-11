@@ -19,7 +19,7 @@ import com.example.numberotpsignin.databinding.ActivityHodBinding;
 public class HOD extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityHodBinding binding;
+    private  ActivityHodBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +29,19 @@ public class HOD extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarHod.toolbar);
-        binding.appBarHod.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.profile, R.id.students,R.id.faculties,R.id.signout)//,R.id.assignproctor,R.id.grievance)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_hod);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -62,4 +57,5 @@ public class HOD extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

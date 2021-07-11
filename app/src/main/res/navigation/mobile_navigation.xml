@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/profile">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.numberotpsignin.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/signout"
+        android:name="com.example.numberotpsignin.ui.SignOut"
+        android:label="@string/signout"
+        tools:layout="@layout/fragment_sign_out" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.numberotpsignin.ui.Profile"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.numberotpsignin.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/students"
+        android:name="com.example.numberotpsignin.ui.Students"
+        android:label="@string/students"
+        tools:layout="@layout/fragment_students" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.numberotpsignin.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/faculties"
+        android:name="com.example.numberotpsignin.ui.Faculties"
+        android:label="@string/faculties"
+        tools:layout="@layout/fragment_faculties" />
 </navigation>

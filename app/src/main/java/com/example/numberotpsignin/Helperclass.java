@@ -2,12 +2,12 @@ package com.example.numberotpsignin;
 
 public class Helperclass {
 
-    String name,father_name,course,roll_number,email,contact_no,address;
+    String name,father_name,course,roll_number,email,contact_no,address,cno;
     public Helperclass(){
 
     }
 
-    public Helperclass(String name, String father_name, String course, String roll_number, String email, String contact_no, String address) {
+    public Helperclass(String name, String father_name, String course, String roll_number, String email, String contact_no, String address,String cno) {
         this.name = name;
         this.father_name = father_name;
         this.course = course;
@@ -15,10 +15,15 @@ public class Helperclass {
         this.email = email;
         this.contact_no = contact_no;
         this.address = address;
+        this.cno = cno;
+
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+    public void setCno(String cno) {
+        this.cno = cno;
     }
 
     public void setFather_name(String father_name) {
@@ -72,4 +77,8 @@ public class Helperclass {
     public String getAddress() {
         return address;
     }
+    public String getCno() {
+        return cno;
+    }
+
 }

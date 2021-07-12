@@ -27,20 +27,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.holder> {
     public holder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
 
         LayoutInflater layoutInflater=LayoutInflater.from(parent.getContext());
-        View view= layoutInflater.inflate(R.layout.itemview,parent,false);
+        View view= layoutInflater.inflate(R.layout.hodstudentsitemview,parent,false);
         return new holder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull Adapter.holder holder, int position) {
         Helperclass helperclass=data.get(position);
-      holder.t1.setText(helperclass.name);
-        holder.t2.setText(helperclass.father_name);
+        holder.t1.setText(helperclass.roll_number);
+        holder.t2.setText(helperclass.name);
         holder.t3.setText(helperclass.course);
-        holder.t4.setText(helperclass.roll_number);
-        holder.t5.setText(helperclass.email);
-        holder.t6.setText(helperclass.contact_no);
-        holder.t7.setText(helperclass.address);
+
+//      holder.t1.setText(helperclass.name);
+//        holder.t2.setText(helperclass.father_name);
+//        holder.t3.setText(helperclass.course);
+//        holder.t4.setText(helperclass.roll_number);
+//        holder.t5.setText(helperclass.email);
+//        holder.t6.setText(helperclass.contact_no);
+//        holder.t7.setText(helperclass.address);
 
     }
 
@@ -58,10 +62,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.holder> {
         t1=(TextView)itemView.findViewById(R.id.tv1);
         t2=(TextView)itemView.findViewById(R.id.tv2);
         t3=(TextView)itemView.findViewById(R.id.tv3);
-        t4=(TextView)itemView.findViewById(R.id.tv4);
-        t5=(TextView)itemView.findViewById(R.id.tv5);
-        t6=(TextView)itemView.findViewById(R.id.tv6);
-        t7=(TextView)itemView.findViewById(R.id.tv7);
+//        t4=(TextView)itemView.findViewById(R.id.tv4);
+//        t5=(TextView)itemView.findViewById(R.id.tv5);
+//        t6=(TextView)itemView.findViewById(R.id.tv6);
+//        t7=(TextView)itemView.findViewById(R.id.tv7);
     }
 }
 }

@@ -1,2 +1,4 @@
-rootProject.name = "numberotpsignin"
+/*
+ * Copyright (C) 2016 The Android Open Source Proje*/
+rootProject.name = "Numberotpsignin"
 include ':app'

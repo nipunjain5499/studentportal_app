@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -51,6 +52,8 @@ public class Studprofile extends Fragment {
         e5=(EditText) view.findViewById(R.id.ed5);
         e6=(EditText) view.findViewById(R.id.ed6);
         e7=(EditText) view.findViewById(R.id.ed7);
+        TextView e8=(TextView) view.findViewById(R.id.tv2);
+
         helperclasses = new ArrayList<>();
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +68,9 @@ public class Studprofile extends Fragment {
                 String email=e5.getText().toString();
                 String no=e6.getText().toString();
                 String address=e7.getText().toString();
-                Helperclass helperclass1= new Helperclass(name,father_name,course,rollno,email,no,address);
+                String cno=e8.getText().toString();
+
+                Helperclass helperclass1= new Helperclass(name,father_name,course,rollno,email,no,address,cno);
                 myref.child(rollno).setValue(helperclass1);
 
 //                Helperclass helperclass= new Helperclass("abcd","defg","fgij","hdhhd","iiii","oooo","aaaa");

@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -33,22 +37,20 @@ public class hodfacultyadapter extends RecyclerView.Adapter<hodfacultyadapter.ho
     @Override
     public void onBindViewHolder(@NonNull holder holder, int position) {
         facultyassign helperclass=facultydata.get(position);
-          holder.t1.setText(helperclass.name);
-          holder.t2.setText(helperclass.contactno);
+          holder.t1.setText(helperclass.getName());
+          holder.t2.setText(helperclass.getContactno());
           holder.t3.setText(helperclass.getDepartment());
-//          holder.itemView.setOnClickListener(new View.OnClickListener() {
-//              @Override
-//              public void onClick(View view) {
-//                //  Intent i=new Intent(view.getContext(),FacultyProfile.class);
-//              //    i.putExtra("faculty",helperclass.contactno);
-//
-//               //  view.getContext().startActivity(i);
-//              }
-//          });
+          holder.itemView.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                  AppCompatActivity activity=(AppCompatActivity) view.getContext();
+                  activity.getSupportFragmentManager().beginTransaction()
+                          .replace(R.id.nav_host_fragment_content_hod,new FacultyProfile(helperclass.getContactno()));
+              }
+          });
     }
 
-    @Override
-    public int getItemCount() {
+    @Override public int getItemCount() {
         return facultydata.size();
     }
 

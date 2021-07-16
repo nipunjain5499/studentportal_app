@@ -20,7 +20,7 @@ public class faculty extends AppCompatActivity {
 
     Button btn1;
     TextView addMoreSubjects;
-    EditText sub1,e1,e2,e3,e4;
+    EditText sub1,e1,e2,e3,e4,e5;
     LinearLayout linearLayout;
     ArrayList <EditText> inputSubjects;
     ArrayList<Subjects> subjects;
@@ -37,6 +37,7 @@ public class faculty extends AppCompatActivity {
         e2=findViewById(R.id.ed2);
         e3=findViewById(R.id.ed3);
         e4=findViewById(R.id.ed4);
+        e5=findViewById(R.id.ed5);
         inputSubjects=new ArrayList<>();
         subjects=new ArrayList<>();
         addMoreSubjects.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +68,7 @@ public class faculty extends AppCompatActivity {
                 String designation=e2.getText().toString();
                 String department=e3.getText().toString();
                 String contact=e4.getText().toString();
+                String email=e5.getText().toString();
                 if(!inputSubjects.isEmpty()) {
                     submitsubjects.add(sub1.getText().toString());
                     for(EditText temp:inputSubjects){
@@ -76,7 +78,7 @@ public class faculty extends AppCompatActivity {
                 else{
                     submitsubjects.add(sub1.getText().toString());
                 }
-                facultyassign facultyassign=new facultyassign(name,designation,department,contact,false,null,submitsubjects);
+                facultyassign facultyassign=new facultyassign(name,designation,department,contact,false,null,submitsubjects,email);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myref = database.getReference().child("Faculty");
                 myref.child(contact).setValue(facultyassign);

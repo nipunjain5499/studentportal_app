@@ -6,7 +6,7 @@ public class facultyassign {
 
     private String name,designation,department,contactno,email;
     private ArrayList<String> facultyinterestedsub;
-    private Boolean assignproctore;
+    private ProctorClass assignproctore;
     private ArrayList<Subjects> assignsubjects;
 
     public facultyassign() {
@@ -24,10 +24,12 @@ public class facultyassign {
         this.designation = designation;
         this.department = department;
         this.contactno = contactno;
-        this.assignproctore = assignproctore;
+        ProctorClass m=new ProctorClass(" ",assignproctore," "," ");
+        this.assignproctore = m;
         this.assignsubjects=assignsubjects;
         this.facultyinterestedsub=facultyinterestedsub;
         this.email=email;
+        this.assignsubjects=assignsubjects;
     }
 
 
@@ -55,7 +57,7 @@ public class facultyassign {
         this.facultyinterestedsub = facultyinterestedsub;
     }
 
-    public void setAssignproctore(boolean assignproctore) {
+    public void setAssignproctore(ProctorClass assignproctore) {
         this.assignproctore = assignproctore;
     }
 
@@ -87,7 +89,7 @@ public class facultyassign {
         return facultyinterestedsub;
     }
 
-    public boolean getAssignproctore() {
+    public ProctorClass getAssignproctore() {
         return assignproctore;
     }
 

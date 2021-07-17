@@ -58,7 +58,7 @@ public class Faculties extends Fragment {
             public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot,
                                      @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
                  facultyassign helperclass=snapshot.getValue(facultyassign.class);
-                 Log.d("Faculty Name",helperclass.getName());
+                // Log.d("Faculty Name",helperclass.getName());
                  facultyList.add(helperclass);
                  recyclerView.getAdapter().notifyDataSetChanged();
             }

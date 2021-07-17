@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,9 +44,10 @@ public class hodfacultyadapter extends RecyclerView.Adapter<hodfacultyadapter.ho
           holder.itemView.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
-                  AppCompatActivity activity=(AppCompatActivity) view.getContext();
-                  activity.getSupportFragmentManager().beginTransaction()
-                          .replace(R.id.nav_host_fragment_content_hod,new FacultyProfile(helperclass.getContactno()));
+                 // AppCompatActivity activity=(AppCompatActivity) view.getContext();
+                  Intent i=new Intent(view.getContext(),FacultyProfile.class);
+                  i.putExtra("facultyKey",helperclass.getContactno());
+                  view.getContext().startActivity(i);
               }
           });
     }

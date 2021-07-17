@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Numberotpsignin">
-        <activity android:name=".FacultyProfile"></activity>
+        <activity android:name=".AssignProctore"></activity>
+        <activity android:name=".AssignSubjectByHod" />
+        <activity android:name=".FacultyProfile" />
         <activity
             android:name=".HOD"
             android:label="@string/title_activity_hod"

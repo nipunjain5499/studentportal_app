@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:src="@drawable/college_logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100sp"
+        />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:layout_centerHorizontal="true"
-        android:text="Welcome To Student's Portal Application"
-        android:textSize="35dp"
-        android:background="#ffffff"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:text="GSTP\n GITAM STUDENT TEACHER PORTAL"
+        android:gravity="center"
+        android:layout_marginBottom="300sp"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:layout_gravity="bottom"
+        />
 
-
-</LinearLayout>
+</FrameLayout>

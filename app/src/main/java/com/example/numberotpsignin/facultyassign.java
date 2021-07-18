@@ -4,30 +4,37 @@ import java.util.ArrayList;
 
 public class facultyassign {
 
-    String name,designation,department,contactno;
-    ArrayList<String> facultyinterestedsub;
-    boolean assignproctore;
-    ArrayList<Subjects> assignsubjects;
+    private String name,designation,department,contactno,email;
+    private ArrayList<String> facultyinterestedsub;
+    private ProctorClass assignproctore;
+    private ArrayList<Subjects> assignsubjects;
 
     public facultyassign() {
     }
 
-    public facultyassign(String name, String designation, String department, String contactno, boolean assignproctore, ArrayList<Subjects> assignsubjects,ArrayList<String> facultyinterestedsub) {
+    public facultyassign(String name,
+                         String designation,
+                         String department,
+                         String contactno,
+                         boolean assignproctore,
+                         ArrayList<Subjects> assignsubjects,
+                         ArrayList<String> facultyinterestedsub,String email)
+    {
         this.name = name;
         this.designation = designation;
         this.department = department;
         this.contactno = contactno;
-        this.assignproctore = assignproctore;
+        ProctorClass m=new ProctorClass(" ",assignproctore," "," ");
+        this.assignproctore = m;
         this.assignsubjects=assignsubjects;
         this.facultyinterestedsub=facultyinterestedsub;
+        this.email=email;
+        this.assignsubjects=assignsubjects;
     }
+
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setFacultyinterestedsub(ArrayList<String> facultyinterestedsub) {
-        this.facultyinterestedsub = facultyinterestedsub;
     }
 
     public void setDesignation(String designation) {
@@ -42,20 +49,24 @@ public class facultyassign {
         this.contactno = contactno;
     }
 
-    public void setAssignproctore(boolean assignproctore) {
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFacultyinterestedsub(ArrayList<String> facultyinterestedsub) {
+        this.facultyinterestedsub = facultyinterestedsub;
+    }
+
+    public void setAssignproctore(ProctorClass assignproctore) {
         this.assignproctore = assignproctore;
     }
 
-    public void setSub(ArrayList<Subjects> sub) {
+    public void setAssignsubjects(ArrayList<Subjects> assignsubjects) {
         this.assignsubjects = assignsubjects;
     }
 
     public String getName() {
         return name;
-    }
-
-    public ArrayList<String> getFacultyinterestedsub() {
-        return facultyinterestedsub;
     }
 
     public String getDesignation() {
@@ -70,11 +81,20 @@ public class facultyassign {
         return contactno;
     }
 
-    public boolean isAssignproctore() {
+    public String getEmail() {
+        return email;
+    }
+
+    public ArrayList<String> getFacultyinterestedsub() {
+        return facultyinterestedsub;
+    }
+
+    public ProctorClass getAssignproctore() {
         return assignproctore;
     }
 
-    public ArrayList<Subjects> getSub() {
+    public ArrayList<Subjects> getAssignsubjects() {
         return assignsubjects;
     }
+
 }

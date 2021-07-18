@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +55,10 @@ public class Faculties extends Fragment {
 
         ChildEventListener childEventListener=new ChildEventListener() {
             @Override
-            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot,
+                                     @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
                  facultyassign helperclass=snapshot.getValue(facultyassign.class);
+                // Log.d("Faculty Name",helperclass.getName());
                  facultyList.add(helperclass);
                  recyclerView.getAdapter().notifyDataSetChanged();
             }

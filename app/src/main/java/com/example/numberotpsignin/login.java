@@ -16,10 +16,17 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+            Button b1=findViewById(R.id.studentLogin);
+            b1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(view.getContext(),ActualStudentActivity.class));
 
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment1, new frag1())
-                    .commit();
+                }
+            });
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.fragment1, new frag1())
+//                    .commit();
 
 
     }

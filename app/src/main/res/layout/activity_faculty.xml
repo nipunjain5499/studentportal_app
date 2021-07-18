@@ -161,8 +161,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="manpasand subject batao"
+        android:text="Write your Interested Subjects"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:textSize="25dp"
         />
 
@@ -182,6 +183,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/subject1"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:hint="Your subject "
             />
     </LinearLayout>

@@ -29,7 +29,7 @@ public class FetchDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fetch_details);
-
+            setTitle("FetchDetails");
         recyclerView=(RecyclerView)findViewById(R.id.recview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
        // String arr[]={"abhi,rajesh,17cse15,cse,abhistyagi@gmail.com,9599642920,a-29 MG uttam nagar","nipun,xyz,17cse35,cse,nipun@gmail.com,95888778787,a-29 MG uttam nagar"};
@@ -45,6 +45,7 @@ public class FetchDetails extends AppCompatActivity {
 //        helperclasses.add(helperclass3);
 //        helperclasses.add(helperclass4);
 //        helperclasses.add(helperclass5);
+
 
         recyclerView.setAdapter(new Adapter(helperclasses));
 

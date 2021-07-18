@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".FacultyProfile">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,6 +16,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="5sp"
     >
 
     <LinearLayout
@@ -28,7 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="22sp"
             android:text="NAME"
+            android:layout_marginLeft="10sp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -37,49 +40,68 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
+
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-            android:src="@drawable/faculty_image"
-            android:id="@+id/emailintent"
-            />
+    android:orientation="horizontal"
+        android:layout_marginTop="5sp">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30sp"
         android:layout_weight="1"
-        android:textSize="20sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         android:text="E-Mail"
+        android:layout_marginLeft="10sp"
         />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="22sp"
         android:id="@+id/facultyEmail"
         android:layout_weight="1"
         />
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:src="@drawable/email"
+            android:id="@+id/emailintent"
+            />
 </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp">
 
-        <ImageView
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-           android:src="@drawable/student_image"
-            android:id="@+id/contacttodialer"
-
-            />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45sp"
             android:layout_weight="1"
-            android:text="CONTACT No."
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="Contact No."
+            android:layout_marginLeft="10sp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -87,16 +109,37 @@
             android:id="@+id/facultyContactNo"
             android:layout_weight="1"
             />
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:src="@drawable/contact"
+            android:id="@+id/contacttodialer"
+
+            />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="22sp"
             android:text="Department"
+            android:layout_marginLeft="10sp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -105,16 +148,29 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="22sp"
             android:text="Designation"
+            android:layout_marginLeft="10sp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -123,14 +179,27 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_marginLeft="10sp"
+            android:textStyle="bold"
             android:text="Proctor"
             />
         <TextView
@@ -140,17 +209,31 @@
             android:layout_weight="1"
             />
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
             android:text="My Subjects"
+
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -160,16 +243,30 @@
             android:id="@+id/facultySubjects"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="bottom"
+        android:alpha="0.5"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="22sp"
             android:text="Assiign Subjects"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -192,6 +289,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1sp"
+            android:layout_marginTop="245sp"
             android:text="Assign Subjects" />
 
         <Button

@@ -8,8 +8,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Numberotpsignin">
-        <activity android:name=".AssignProctore"></activity>
+        android:theme="@style/Theme.Numberotpsignin.NoActionBar">
+        <activity
+            android:name=".ActualStudentActivity"
+            ></activity>
+        <activity
+            android:name=".Student"
+            android:label="Student">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AssignProctore" />
         <activity android:name=".AssignSubjectByHod" />
         <activity android:name=".FacultyProfile" />
         <activity
@@ -30,10 +42,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".FetchDetails" />
-        <activity android:name=".Student" />
         <activity android:name=".Signup" />
         <activity android:name=".login" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Numberotpsignin.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
